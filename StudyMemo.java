@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class StudyMemo {
     public static void main(String[] args) {
@@ -9,7 +10,6 @@ public class StudyMemo {
 
         System.out.println(Integer.MAX_VALUE); // 정수에서 가장 큰 값 2147483647 만약 + 1 하면 -2147483647 나옴
         System.out.println((long)Integer.MAX_VALUE); // int 보다 큰 long을 붙여주면 2147483648 나옴
-
         System.out.println(Integer.MIN_VALUE); // 정수에서 가장 작은 값 -2147483647
 
 // String, char 관련 문법
@@ -187,6 +187,24 @@ public class StudyMemo {
         System.out.println("map2 = " + map2); // {id = 1234}
 
 
+        // Array 와 ArrayList의 차이점
+        //                               [Array]  (초시화시 고정)                                        [ArrayList]  (초기화시 사이즈를 표시하지 않음, 크기가 가변적임)
+                                         int[] arr = new int[3];                                       ArrayList<Integer> arrList = new ArrayList<>();
+        // fastest                       초기화시 메모리에 할당되어 ArrayList보다 속도가 빠름                  데이터 추가 삭제시 메모리를 재할당하기 때문에 속도가 Array보다 느림
+        // sizeChange                    사이즈 변경 불가                                                 추가, 삭제 가능 / .add(), remove()
+        // Multidimensional              int[][][] multiArr = new int[3][5][1];                        불가능
+
+        // HashMap 과 HashSet의 차이점
+        //                               HashMap                                                       HashSet
+                                         HashMap<String,String> map6 = new HashMap<String,String>();   HashSet<Integer> set1 = new HashSet<Integer>();
+        //                               HashTable과 유사한 자료구조로 데이터를 저장한다.                     내부적으로 HashMap을 사용하기 때문에 HashTable과 유사한 자료구조로 데이터를 저장한다.
+        //                               HashMap은 Key-Value 쌍 형태로 데이터를 저장한다.                    Key 값으로는 삽입되는 객체 그 자체를, Value 값으로는 HashSet 내부 구현 코드에서 미리 선언해둔 dummy 객체를 사용
+        //                               HashMap은 중복 Key 값을 허용하지 않지만, 중복 Value 값은 허용한다.     HashSet은 객체 자체를 데이터로 저장하기 때문에 중복을 허용하지 않는다.
+        //                               ex. {'a': 1, 'b': 1, 'c': 2}                                   ex. {'a', 'b', 'c'}
+        //                               HashMap이 HashSet보다 빠르다. 그래서 데이터의 유일함(Uniqueness)을 유지하기 위해 항상 HashMap이 HashSet보다 선호된다.
+
+
+
 // 연산자
         // 산술 연산자, 증가 * 감소 연산자
         int num1 = 10;
@@ -293,6 +311,22 @@ public class StudyMemo {
             }
             System.out.println(i++);
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
