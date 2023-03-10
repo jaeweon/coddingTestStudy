@@ -6,6 +6,8 @@ import java.util.HashSet;
 public class StudyMemo {
     public static void main(String[] args) {
 
+        // 자주 쓰이는 문법 
+        
 // int 관련 문법
 
         System.out.println(Integer.MAX_VALUE); // 정수에서 가장 큰 값 2147483647 만약 + 1 하면 -2147483647 나옴
@@ -311,26 +313,6 @@ public class StudyMemo {
             }
             System.out.println(i++);
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }
